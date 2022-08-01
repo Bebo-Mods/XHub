@@ -1,6 +1,12 @@
--- Universal
-if game.placeId == (8540168650) then
-   loadstring(game:HttpGet("StandUpright", true))()
+if game.PlaceId == (3851622790) then
+elseif game.PlaceId == (4620170611) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/XHub/main/BreakInStoryLobby.lua", true))()
 else
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/KittenMilkHub/main/Universal.lua", true))()
+    game.StarterGui:SetCore(
+        "SendNotification",
+        {
+            Title = "Game Not Supported Yet",
+            Text = "Try Again Later"
+        }
+    )
 end
