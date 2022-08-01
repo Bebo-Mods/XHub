@@ -1,6 +1,7 @@
 if game.PlaceId == (3851622790) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/XHub/main/BreakInStoryLobby.lua", true))()
 elseif game.PlaceId == (4620170611) then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/XHub/main/BreakInStoryLobby.lua", true))()
+    print("Adding Soon")
 else
     game.StarterGui:SetCore(
         "SendNotification",
