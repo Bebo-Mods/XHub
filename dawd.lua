@@ -1,9 +1,14 @@
-loadstring(game:HttpGet("https://pastebin.com/raw/226Lm8W1"))()
-if _G.YESORNOLOL == true then
-    print("enabled")
-end
+local pastebinURL = "https://pastebin.com/raw/226Lm8W1" -- Replace PASTEBIN_ID with the actual ID of the Pastebin script
 
--- Services
+local scriptContent = game:HttpGet(pastebinURL)
+local success, scriptResult = pcall(loadstring(scriptContent))
+
+if success then
+    if type(scriptResult) == true then
+        local scriptEnabled = scriptResult
+
+        if scriptEnabled then
+            -- Services
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
@@ -2938,3 +2943,10 @@ function Library:Create(options)
 end
 
 return Library
+        end
+    else
+        print("Invalid value retrieved from Pastebin")
+    end
+else
+    print("Error fetching or executing the Pastebin script")
+end
