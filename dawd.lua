@@ -1,7 +1,8 @@
 loadstring(game:HttpGet("https://pastebin.com/raw/226Lm8W1"))()
-if _G.YESORNOLOL = true then
-print("enabled")
+if _G.YESORNOLOL == true then
+    print("enabled")
 end
+
 -- Services
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
